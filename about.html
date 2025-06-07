@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Titumma Agrochemicals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #6b746d, #e8f5db);
+      color: #1f2937;
+    }
+
+    header.hero-header {
+      position: relative;
+      height: 30vh;
+      background: url('./images/ng.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-left: 5%;
+      color: white;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .breadcrumb a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 0.5rem;
+    }
+
+    section.content {
+      padding: 4rem 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    h2.section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #a3e635, #22c55e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    h2.section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(90deg, #a3e635, #22c55e);
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+
+    .section-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.7;
+      color: #2f2f2f;
+      max-width: 800px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>→</span>
+        <span>About Us</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="content">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-text">
+      Titumma Agrochemicals was born out of the need to bring affordable and high-quality farming inputs to rural communities. We provide essential agrochemical products including pesticides, weedicides, and knapsack sprayers to empower local farmers. Our team also trains farmers and extension officers to use our products safely and effectively, boosting yields and enhancing community well-being.
+    </p>
+  </section>
+
+  <section class="content">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-text">
+      We are a dedicated team of agrochemical professionals and educators, committed to supporting sustainable farming practices. At Titumma, we believe in farming with purpose, educating farmers, and enabling the growth of thriving agricultural ecosystems in underserved areas.
+    </p>
+  </section>
+
+  <section class="content">
+    <h2 class="section-title">Our Impact</h2>
+    <p class="section-text">
+      Through our outreach and training programs, we have improved the productivity of hundreds of farmers and supported agricultural development in our communities. Our products and knowledge-sharing efforts continue to make a lasting difference.
+    </p>
+  </section>
+</body>
+</html>
