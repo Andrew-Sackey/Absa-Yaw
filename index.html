@@ -6,6 +6,7 @@
   <title>Titumma Agrochemicals</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <script defer src="products.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
       </a>
       <div class="nav-menu">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#products" class="nav-link">Products</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -77,7 +78,7 @@
         </p>
         <div class="cta-buttons">
           <a href="#products" class="btn-primary">Get Started</a>
-          <a href="#about" class="btn-secondary">Learn More</a>
+          <a href="about.html" class="btn-secondary">Learn More</a>
         </div>
         <div class="stats-row">
           <div class="stat">
@@ -161,143 +162,432 @@
     </div>
   </div>
 </section>
-<!-- Products section -->
-<section class="products-section">
-  <h2 class="products-title">Our Products</h2>
-  <div class="products-grid">
+<!-- Enhanced Products Section -->
+<section id="products" class="products-section">
+  <div class="products-container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title">Our Products</h2>
+      <p class="section-subtitle">
+        Discover our comprehensive range of high-quality agrochemicals and farming equipment designed to maximize your agricultural success.
+      </p>
+    </div>
 
-    <!-- Product Card 1 -->
-    <div class="product-card">
-      <img src="./images/knap.png" alt="Knapsack Sprayer"/>
-      <div class="product-details">
-        <h3>Knapsack Sprayer</h3>
-        <p>Durable sprayer for all your pesticide needs.</p>
-        <span class="price">$35.00</span>
-        <button class="buy-btn">Buy Now</button>
+    <!-- Product Categories Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">All Products</button>
+      <button class="filter-btn" data-category="pesticides">Pesticides</button>
+      <button class="filter-btn" data-category="weedicides">Weedicides</button>
+      <button class="filter-btn" data-category="fertilizers">Fertilizers</button>
+      <button class="filter-btn" data-category="knapsack-sprayers">Knapsack Sprayers</button>
+      <button class="filter-btn" data-category="seeds">Seeds</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid">
+      <!-- Product Card 1 -->
+      <div class="product-card visible" data-category="knapsack-sprayers">
+        <div class="product-image">
+          <img src="./images/knap.png" alt="Professional Knapsack Sprayer" loading="lazy">
+          <div class="product-badge">Best Seller</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="1">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Knapsack Sprayers</div>
+          <h3 class="product-title">Professional Knapsack Sprayer</h3>
+          <p class="product-description">High-capacity, durable sprayer with ergonomic design for efficient pesticide application.</p>
+          <div class="product-features">
+            <span class="feature-tag">20L Capacity</span>
+            <span class="feature-tag">Durable</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$35.00</span>
+              <span class="original-price">$42.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="1" data-price="35.00" data-title="Professional Knapsack Sprayer">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card visible" data-category="weedicides">
+        <div class="product-image">
+          <img src="./images/S2.jpeg" alt="Advanced Weedicide X" loading="lazy">
+          <div class="product-badge new">New</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="2">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Weedicides</div>
+          <h3 class="product-title">Advanced Weedicide X</h3>
+          <p class="product-description">Powerful broad-spectrum herbicide for effective weed control in all crop types.</p>
+          <div class="product-features">
+            <span class="feature-tag">Fast Acting</span>
+            <span class="feature-tag">Eco-Safe</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$15.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="2" data-price="15.00" data-title="Advanced Weedicide X">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card visible" data-category="pesticides">
+        <div class="product-image">
+          <img src="./images/p1.png" alt="GreenShield Pesticide Pro" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="3">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Pesticides</div>
+          <h3 class="product-title">GreenShield Pesticide Pro</h3>
+          <p class="product-description">Advanced protection formula for comprehensive crop defense against pests and diseases.</p>
+          <div class="product-features">
+            <span class="feature-tag">Long-lasting</span>
+            <span class="feature-tag">Multi-pest</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$18.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="3" data-price="18.00" data-title="GreenShield Pesticide Pro">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card visible" data-category="seeds">
+        <div class="product-image">
+          <img src="./images/R3.jpeg" alt="Premium Maize Seeds" loading="lazy">
+          <div class="product-badge premium">Premium</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="4">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Seeds</div>
+          <h3 class="product-title">Premium Maize Seeds</h3>
+          <p class="product-description">High-yield maize variety with excellent drought resistance and pest tolerance.</p>
+          <div class="product-features">
+            <span class="feature-tag">High Yield</span>
+            <span class="feature-tag">Drought Resistant</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$12.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="4" data-price="12.00" data-title="Premium Maize Seeds">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card visible" data-category="knapsack-sprayers">
+        <div class="product-image">
+          <img src="./images/S4.jpeg" alt="Precision Sprayer Nozzle Kit" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="5">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Knapsack Sprayers</div>
+          <h3 class="product-title">Precision Sprayer Nozzle Kit</h3>
+          <p class="product-description">Complete nozzle set for precise application and reduced chemical waste.</p>
+          <div class="product-features">
+            <span class="feature-tag">5-Piece Set</span>
+            <span class="feature-tag">Precision</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$8.99</span>
+            </div>
+            <button class="buy-btn" data-product-id="5" data-price="8.99" data-title="Precision Sprayer Nozzle Kit">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card visible" data-category="knapsack-sprayers">
+        <div class="product-image">
+          <img src="./images/S5.jpeg" alt="Mobile Power Sprayer" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="6">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Knapsack Sprayers</div>
+          <h3 class="product-title">Mobile Power Sprayer</h3>
+          <p class="product-description">Battery-powered sprayer for efficient coverage of large agricultural areas.</p>
+          <div class="product-features">
+            <span class="feature-tag">Battery Powered</span>
+            <span class="feature-tag">Mobile</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$85.00</span>
+              <span class="original-price">$95.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="6" data-price="85.00" data-title="Mobile Power Sprayer">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Products (Show on Load More) -->
+      <!-- Product Card 7 -->
+      <div class="product-card hidden" data-category="seeds">
+        <div class="product-image">
+          <img src="./images/c1.jpeg" alt="Organic Cashew Seeds" loading="lazy">
+          <div class="product-badge organic">Organic</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="7">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Seeds</div>
+          <h3 class="product-title">Organic Cashew Seeds</h3>
+          <p class="product-description">Certified organic cashew seeds for sustainable and profitable farming.</p>
+          <div class="product-features">
+            <span class="feature-tag">Certified Organic</span>
+            <span class="feature-tag">High Quality</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$9.50</span>
+            </div>
+            <button class="buy-btn" data-product-id="7" data-price="9.50" data-title="Organic Cashew Seeds">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="product-card hidden" data-category="knapsack-sprayers">
+        <div class="product-image">
+          <img src="./images/R1.jpeg" alt="Professional Weed Blower" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="8">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Knapsack Sprayers</div>
+          <h3 class="product-title">Professional Weed Blower</h3>
+          <p class="product-description">Powerful blower for cleaning walkways, gardens, and agricultural areas.</p>
+          <div class="product-features">
+            <span class="feature-tag">High Power</span>
+            <span class="feature-tag">Lightweight</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$65.75</span>
+            </div>
+            <button class="buy-btn" data-product-id="8" data-price="65.75" data-title="Professional Weed Blower">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 9 -->
+      <div class="product-card hidden" data-category="fertilizers">
+        <div class="product-image">
+          <img src="./images/R2.jpeg" alt="Premium Organic Fertilizer" loading="lazy">
+          <div class="product-badge eco">Eco-Friendly</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="9">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Fertilizers</div>
+          <h3 class="product-title">Premium Organic Fertilizer</h3>
+          <p class="product-description">100% organic fertilizer for sustainable soil enrichment and crop nutrition.</p>
+          <div class="product-features">
+            <span class="feature-tag">100% Organic</span>
+            <span class="feature-tag">Soil Enriching</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$25.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="9" data-price="25.00" data-title="Premium Organic Fertilizer">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 10 -->
+      <div class="product-card hidden" data-category="pesticides">
+        <div class="product-image">
+          <img src="./images/R6.jpeg" alt="InsectGuard Pro" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="10">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Pesticides</div>
+          <h3 class="product-title">InsectGuard Pro</h3>
+          <p class="product-description">Advanced broad-spectrum insecticide for comprehensive pest management.</p>
+          <div class="product-features">
+            <span class="feature-tag">Broad Spectrum</span>
+            <span class="feature-tag">Professional</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$20.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="10" data-price="20.00" data-title="InsectGuard Pro">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 11 -->
+      <div class="product-card hidden" data-category="seeds">
+        <div class="product-image">
+          <img src="./images/m1.png" alt="Organic Maize Elite Seeds" loading="lazy">
+          <div class="product-badge premium">Premium</div>
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="11">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Seeds</div>
+          <h3 class="product-title">Organic Maize Elite Seeds</h3>
+          <p class="product-description">Elite variety organic maize seeds for maximum yield and superior quality harvest.</p>
+          <div class="product-features">
+            <span class="feature-tag">Elite Variety</span>
+            <span class="feature-tag">Organic</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$19.99</span>
+            </div>
+            <button class="buy-btn" data-product-id="11" data-price="19.99" data-title="Organic Maize Elite Seeds">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 12 -->
+      <div class="product-card hidden" data-category="knapsack-sprayers">
+        <div class="product-image">
+          <img src="./images/R7.jpeg" alt="Compact Knapsack Sprayer" loading="lazy">
+          <div class="product-overlay">
+            <button class="quick-view-btn" data-product="12">
+              <i class="fas fa-eye"></i>
+              Quick View
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Knapsack Sprayers</div>
+          <h3 class="product-title">Compact Knapsack Sprayer</h3>
+          <p class="product-description">Lightweight and durable sprayer perfect for small to medium farming operations.</p>
+          <div class="product-features">
+            <span class="feature-tag">Lightweight</span>
+            <span class="feature-tag">Compact</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="current-price">$28.00</span>
+              <span class="original-price">$32.00</span>
+            </div>
+            <button class="buy-btn" data-product-id="12" data-price="28.00" data-title="Compact Knapsack Sprayer">
+              Buy Now
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Product Card 2 -->
-    <div class="product-card">
-      <img src="./images/S2.jpeg" alt="Weedicide"/>
-      <div class="product-details">
-        <h3>Weedicide X</h3>
-        <p>Powerful formula to keep weeds at bay.</p>
-        <span class="price">$15.00</span>
-        <button class="buy-btn">Buy Now</button>
+    <!-- Load More Button -->
+    <div class="load-more-section">
+      <button class="load-more-btn" id="loadMoreBtn">
+        <i class="fas fa-plus"></i>
+        Load More Products
+      </button>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view-modal" id="quickViewModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalProductImage" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <div class="modal-category" id="modalCategory"></div>
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <p class="modal-description" id="modalDescription"></p>
+          <div class="modal-features" id="modalFeatures"></div>
+          <div class="modal-price" id="modalPrice"></div>
+          <button class="modal-buy-btn" id="modalBuyBtn">
+            Buy Now
+          </button>
+        </div>
       </div>
     </div>
-
-    <!-- Product Card 3 -->
-    <div class="product-card">
-      <img src="./images/p1.png" alt="Pesticide"/>
-      <div class="product-details">
-        <h3>GreenShield Pesticide</h3>
-        <p>Protect your crops with our effective blend.</p>
-        <span class="price">$18.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 4 -->
-    <div class="product-card">
-      <img src="./images/R3.jpeg" alt="Seeds"/>
-      <div class="product-details">
-        <h3>Maize Seed Pack</h3>
-        <p>High-yield maize seeds from Titumma.</p>
-        <span class="price">$12.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 5 -->
-    <div class="product-card">
-      <img src="./images/S4.jpeg" alt="Nozzle"/>
-      <div class="product-details">
-        <h3>Sprayer Nozzle Kit</h3>
-        <p>Precision nozzle kit for effective spraying.</p>
-        <span class="price">$8.99</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 6 -->
-    <div class="product-card">
-      <img src="./images/S5.jpeg" alt="Gloves"/>
-      <div class="product-details">
-        <h3>Mobile Sprayer</h3>
-        <p>Best for chemical handling.</p>
-        <span class="price">$5.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 7 -->
-    <div class="product-card">
-      <img src="./images/c1.jpeg" alt="Tomato Seeds"/>
-      <div class="product-details">
-        <h3>Cashew Seeds</h3>
-        <p>Premium seeds for every weather.</p>
-        <span class="price">$9.50</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 8 -->
-    <div class="product-card">
-      <img src="./images/R1.jpeg" alt="Goggles"/>
-      <div class="product-details">
-        <h3>Weed Blower</h3>
-        <p>Best for cleaning walkways and backyards.</p>
-        <span class="price">$6.75</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 9 -->
-    <div class="product-card">
-      <img src="./images/R2.jpeg" alt="Fertilizer"/>
-      <div class="product-details">
-        <h3>Organic Fertilizer</h3>
-        <p>Boost your yields organically.</p>
-        <span class="price">$25.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 10 -->
-    <div class="product-card">
-      <img src="./images/R6.jpeg" alt="Insecticide"/>
-      <div class="product-details">
-        <h3>InsectGuard</h3>
-        <p>Broad-spectrum insecticide spray.</p>
-        <span class="price">$20.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 11 -->
-    <div class="product-card">
-      <img src="./images/m1.png" alt="Boots"/>
-      <div class="product-details">
-        <h3>Organic Maize seeds</h3>
-        <p>Best seeds for bumper harvest.</p>
-        <span class="price">$19.99</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
-    <!-- Product Card 12 -->
-    <div class="product-card">
-      <img src="./images/R7.jpeg" alt="Watering Can"/>
-      <div class="product-details">
-        <h3>Knapsack Sprayer</h3>
-        <p>Lightweight and durable for use.</p>
-        <span class="price">$10.00</span>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-
   </div>
 </section>
 <!-- Contact Section -->
