@@ -6,43 +6,64 @@
   <title>Titumma Agrochemicals</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-    <div class="logo-icon">🌱</div>
-    <span class="logo-text">Titumma Agrochemicals</span>
-    </div>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#products" class="nav-link">Products</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li><a href="#testimonials" class="nav-link">Testimonial</a></li>
-      </ul>
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">🌱</div>
+        <span class="logo-text">Titumma Agrochemicals</span>
+      </a>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#testimonials" class="nav-link">Testimonial</a>
+      </div>
       <div class="hamburger">
         <span></span><span></span><span></span>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Section -->
+  
+  <!-- Enhanced Hero Section with 5 Slides -->
   <section class="hero" id="home">
     <div class="slideshow-container">
+      <!-- Slide 1 - Existing image -->
       <div class="slide active">
-        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('./images/ng.jpeg');"></div>
+        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/ng.jpeg');"></div>
       </div>
+      
+      <!-- Slide 2 - Farming field -->
       <div class="slide">
-        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1920&q=80');"></div>
       </div>
+      
+      <!-- Slide 3 - Existing tractor image -->
       <div class="slide">
-        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('./images/Tract.jpeg');"></div>
+        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/Tract.jpeg');"></div>
+      </div>
+      
+      <!-- Slide 4 - Agricultural spraying -->
+      <div class="slide">
+        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1920&q=80');"></div>
+      </div>
+      
+      <!-- Slide 5 - Harvest/crops -->
+      <div class="slide">
+        <div class="slide-content" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566040595206-146d7667d456?auto=format&fit=crop&w=1920&q=80');"></div>
       </div>
     </div>
-
+  
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
@@ -51,8 +72,8 @@
           <span class="title-line-3">Simple</span>
         </h1>
         <p class="hero-subtitle">
-          Empower your farming journey with premium agrochemicals, expert training, and support.
-          Connecting farmers with extension officers in Gushegu Municipal.
+          Empower your farming journey with premium agrochemicals, expert training, and comprehensive support. 
+          Connecting farmers with extension officers in Gushegu Municipal for sustainable agricultural growth.
         </p>
         <div class="cta-buttons">
           <a href="#products" class="btn-primary">Get Started</a>
@@ -60,25 +81,28 @@
         </div>
         <div class="stats-row">
           <div class="stat">
-            <span class="stat-number" data-count="1000">0</span>
+            <span class="stat-number" data-count="1000">1000+</span>
             <span class="stat-label">Happy Farmers</span>
           </div>
           <div class="stat">
-            <span class="stat-number" data-count="95">0%</span>
+            <span class="stat-number" data-count="95">95%</span>
             <span class="stat-label">Success Rate</span>
           </div>
           <div class="stat">
-            <span class="stat-number" data-count="100">0</span>
+            <span class="stat-number" data-count="100">100+</span>
             <span class="stat-label">Women Supported</span>
           </div>
         </div>
       </div>
     </div>
-
+  
+    <!-- Enhanced slideshow navigation with 5 buttons -->
     <div class="slideshow-nav">
       <button class="slide-btn active" data-slide="0"></button>
       <button class="slide-btn" data-slide="1"></button>
       <button class="slide-btn" data-slide="2"></button>
+      <button class="slide-btn" data-slide="3"></button>
+      <button class="slide-btn" data-slide="4"></button>
     </div>
   </section>
 <!-- About Section (Home Page Preview) -->
@@ -137,5 +161,525 @@
     </div>
   </div>
 </section>
+<!-- Products section -->
+<section class="products-section">
+  <h2 class="products-title">Our Products</h2>
+  <div class="products-grid">
+
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="./images/knap.png" alt="Knapsack Sprayer"/>
+      <div class="product-details">
+        <h3>Knapsack Sprayer</h3>
+        <p>Durable sprayer for all your pesticide needs.</p>
+        <span class="price">$35.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="./images/S2.jpeg" alt="Weedicide"/>
+      <div class="product-details">
+        <h3>Weedicide X</h3>
+        <p>Powerful formula to keep weeds at bay.</p>
+        <span class="price">$15.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="./images/p1.png" alt="Pesticide"/>
+      <div class="product-details">
+        <h3>GreenShield Pesticide</h3>
+        <p>Protect your crops with our effective blend.</p>
+        <span class="price">$18.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <img src="./images/R3.jpeg" alt="Seeds"/>
+      <div class="product-details">
+        <h3>Maize Seed Pack</h3>
+        <p>High-yield maize seeds from Titumma.</p>
+        <span class="price">$12.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="product-card">
+      <img src="./images/S4.jpeg" alt="Nozzle"/>
+      <div class="product-details">
+        <h3>Sprayer Nozzle Kit</h3>
+        <p>Precision nozzle kit for effective spraying.</p>
+        <span class="price">$8.99</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="product-card">
+      <img src="./images/S5.jpeg" alt="Gloves"/>
+      <div class="product-details">
+        <h3>Mobile Sprayer</h3>
+        <p>Best for chemical handling.</p>
+        <span class="price">$5.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 7 -->
+    <div class="product-card">
+      <img src="./images/c1.jpeg" alt="Tomato Seeds"/>
+      <div class="product-details">
+        <h3>Cashew Seeds</h3>
+        <p>Premium seeds for every weather.</p>
+        <span class="price">$9.50</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 8 -->
+    <div class="product-card">
+      <img src="./images/R1.jpeg" alt="Goggles"/>
+      <div class="product-details">
+        <h3>Weed Blower</h3>
+        <p>Best for cleaning walkways and backyards.</p>
+        <span class="price">$6.75</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 9 -->
+    <div class="product-card">
+      <img src="./images/R2.jpeg" alt="Fertilizer"/>
+      <div class="product-details">
+        <h3>Organic Fertilizer</h3>
+        <p>Boost your yields organically.</p>
+        <span class="price">$25.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 10 -->
+    <div class="product-card">
+      <img src="./images/R6.jpeg" alt="Insecticide"/>
+      <div class="product-details">
+        <h3>InsectGuard</h3>
+        <p>Broad-spectrum insecticide spray.</p>
+        <span class="price">$20.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 11 -->
+    <div class="product-card">
+      <img src="./images/m1.png" alt="Boots"/>
+      <div class="product-details">
+        <h3>Organic Maize seeds</h3>
+        <p>Best seeds for bumper harvest.</p>
+        <span class="price">$19.99</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product Card 12 -->
+    <div class="product-card">
+      <img src="./images/R7.jpeg" alt="Watering Can"/>
+      <div class="product-details">
+        <h3>Knapsack Sprayer</h3>
+        <p>Lightweight and durable for use.</p>
+        <span class="price">$10.00</span>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+      <div class="contact-header">
+          <h1>Contact Us</h1>
+          <div class="breadcrumb">Home / Contact</div>
+      </div>
+
+      <div class="contact-content">
+          <div class="contact-form">
+              <h2>Get In Touch</h2>
+              <form id="contactForm">
+                  <div class="form-group">
+                      <input type="text" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" placeholder="your.email@example.com" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="tel" placeholder="Phone Number">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" placeholder="Subject">
+                  </div>
+                  <div class="form-group">
+                      <textarea placeholder="Your Message" required></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+          </div>
+
+          <div class="contact-info">
+              <div class="info-card">
+                  <div class="contact-grid">
+                      <div class="contact-item">
+                          <div class="contact-icon">
+                              <i class="fas fa-phone"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h3>Phone Number</h3>
+                              <p>+233 24 123 4567</p>
+                          </div>
+                      </div>
+                      
+                      <div class="contact-item">
+                          <div class="contact-icon">
+                              <i class="fas fa-envelope"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h3>Email Address</h3>
+                              <p>info@agrotech.com</p>
+                          </div>
+                      </div>
+
+                      <div class="contact-item">
+                          <div class="contact-icon">
+                              <i class="fas fa-map-marker-alt"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h3>Our Office</h3>
+                              <p>123 Agriculture Street, Accra, Ghana</p>
+                          </div>
+                      </div>
+
+                      <div class="contact-item">
+                          <div class="contact-icon">
+                              <i class="fab fa-whatsapp"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h3>WhatsApp</h3>
+                              <p>+233 55 123 4567</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="social-section">
+                      <h3>Follow Us</h3>
+                      <div class="social-icons">
+                          <a href="#" class="social-icon" title="TikTok">
+                              <i class="fab fa-tiktok"></i>
+                          </a>
+                          <a href="#" class="social-icon" title="Facebook">
+                              <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a href="#" class="social-icon" title="WhatsApp">
+                              <i class="fab fa-whatsapp"></i>
+                          </a>
+                          <a href="#" class="social-icon" title="Location">
+                              <i class="fas fa-map-marker-alt"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="map-section">
+                  <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7919401190653!2d-0.1969!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0x72f7455d535b1c!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1623456789012!5m2!1sen!2sgh"
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section id="testimonials" class="testimonial-section">
+  <div class="testimonial-container">
+    
+    <!-- Main Testimonial Card Container -->
+    <div class="testimonial-main-card">
+      
+      <!-- Header -->
+      <div class="testimonial-header">
+        <h2 class="testimonial-title">What our Clients say!</h2>
+      </div>
+
+      <!-- Testimonial Slider -->
+      <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          
+          <!-- Testimonial Card 1 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="star-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+            <p class="testimonial-text">
+              "Titumma's products have completely transformed my farm's productivity. Their training programs taught me proper application techniques, and now my maize yields have increased by 60%. The team's support is exceptional!"
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">KA</div>
+              <div class="customer-details">
+                <h4>Kwame Asante</h4>
+                <p>Maize Farmer, Gushegu</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="star-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-text">
+              "As a female farmer, I was hesitant about using agrochemicals. But Titumma's women-focused training gave me confidence. Their affordable products and ongoing support have helped me expand my vegetable farm significantly."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">AM</div>
+              <div class="customer-details">
+                <h4>Aisha Mohammed</h4>
+                <p>Vegetable Farmer, Karaga</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="star-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+            <p class="testimonial-text">
+              "The knapsack sprayers from Titumma are game-changers! Durable, efficient, and perfect for our farm size. Combined with their quality weedicides, we've reduced our labor costs by 40% while improving crop quality."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">JO</div>
+              <div class="customer-details">
+                <h4>John Osei</h4>
+                <p>Rice Farmer, Savelugu</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 4 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="star-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+            <p class="testimonial-text">
+              "Working with Titumma as an extension officer has been remarkable. Their farmer education programs are comprehensive and practical. The collaboration has improved agricultural practices across multiple communities."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">FA</div>
+              <div class="customer-details">
+                <h4>Fatima Abdul</h4>
+                <p>Extension Officer, Ministry of Agriculture</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 5 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="star-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-text">
+              "Titumma's pest control solutions saved my tomato farm from devastating pest attacks. Their expert advice and quality products are unmatched. I now recommend them to every farmer in our cooperative."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">SO</div>
+              <div class="customer-details">
+                <h4>Samuel Oppong</h4>
+                <p>Tomato Farmer, Tamale</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="slider-nav">
+        <button class="nav-btn" id="prevBtn">‹</button>
+        <button class="nav-btn" id="nextBtn">›</button>
+      </div>
+
+      <!-- Dots Indicator -->
+      <div class="slider-dots" id="sliderDots"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer-section">
+  <div class="footer-container">
+    
+    <!-- Newsletter Subscription -->
+    <div class="newsletter-section">
+      <h3>Subscribe for News</h3>
+      <p>Stay updated with our latest products, farming tips, and agricultural insights delivered to your inbox.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-content">
+      
+      <!-- Company Info -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <div class="logo-icon">🌱</div>
+          <span class="logo-text">Titumma Agrochemicals</span>
+        </div>
+        <p class="company-description">
+          Empowering farmers with premium agrochemicals, expert training, and sustainable solutions for thriving agricultural communities across Ghana.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-column">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Pesticide Supply</a></li>
+          <li><a href="#">Weedicide Solutions</a></li>
+          <li><a href="#">Knapsack Sprayers</a></li>
+          <li><a href="#">Farmer Training</a></li>
+          <li><a href="#">Agricultural Consulting</a></li>
+          <li><a href="#">Extension Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Working Hours -->
+      <div class="footer-column">
+        <h4>Working Hours</h4>
+        <div class="working-hours">
+          <div class="hours-item">
+            <span class="day">Monday - Friday:</span>
+            <span class="time">8:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="day">Saturday:</span>
+            <span class="time">9:00 AM - 4:00 PM</span>
+          </div>
+          <div class="hours-item">
+            <span class="day">Sunday:</span>
+            <span class="time">Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Get In Touch -->
+      <div class="footer-column">
+        <h4>Get In Touch</h4>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Agriculture Street, Gushegu Municipal, Northern Region, Ghana</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+233 24 123 4567</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@titumma-agro.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+233 55 123 4567</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          &copy; 2024 Titumma Agrochemicals. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
