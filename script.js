@@ -128,6 +128,27 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+});
+
+// Prevent menu from closing when clicking inside it
+navMenu.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+// Handle window resize - close mobile menu if opened when switching to desktop view
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+});
+
 // Navbar background change on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
@@ -267,13 +288,35 @@ document.querySelectorAll('.contact-item').forEach(item => {
   });
 });
 
-// Add click animation to social icons
+// Add hover effects to contact items
+document.querySelectorAll('.contact-item').forEach(item => {
+  item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px) scale(1.02)';
+      this.style.transition = 'transform 0.3s ease';
+  });
+     
+  item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+  });
+});
+
+// Add click animation to social icons - FIXED VERSION
 document.querySelectorAll('.social-icon').forEach(icon => {
   icon.addEventListener('click', function(e) {
-      e.preventDefault();
+      // Only prevent default for placeholder links (#)
+      if (this.getAttribute('href') === '#') {
+          e.preventDefault();
+      }
+      
+      // Add click animation
       this.style.transform = 'scale(0.95) translateY(-3px)';
       setTimeout(() => {
           this.style.transform = 'translateY(-3px) scale(1.1)';
+          
+          // Reset animation after a short delay
+          setTimeout(() => {
+              this.style.transform = '';
+          }, 200);
       }, 150);
   });
 });
@@ -281,14 +324,16 @@ document.querySelectorAll('.social-icon').forEach(icon => {
 // Add smooth scrolling animation when page loads
 window.addEventListener('load', function() {
   const contactContainer = document.querySelector('.contact-container');
-  contactContainer.style.opacity = '0';
-  contactContainer.style.transform = 'translateY(30px)';
-  
-  setTimeout(() => {
-      contactContainer.style.transition = 'all 0.8s ease';
-      contactContainer.style.opacity = '1';
-      contactContainer.style.transform = 'translateY(0)';
-  }, 100);
+  if (contactContainer) {
+      contactContainer.style.opacity = '0';
+      contactContainer.style.transform = 'translateY(30px)';
+         
+      setTimeout(() => {
+          contactContainer.style.transition = 'all 0.8s ease';
+          contactContainer.style.opacity = '1';
+          contactContainer.style.transform = 'translateY(0)';
+      }, 100);
+  }
 });
 
 // Add floating animation to contact form
@@ -312,10 +357,12 @@ const scrollObserver = new IntersectionObserver(function(entries) {
 
 // Observe elements for animation
 [contactForm, contactInfo].forEach(element => {
-  element.style.opacity = '0';
-  element.style.transform = 'translateY(50px)';
-  element.style.transition = 'all 0.6s ease';
-  scrollObserver.observe(element);
+  if (element) {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(50px)';
+      element.style.transition = 'all 0.6s ease';
+      scrollObserver.observe(element);
+  }
 });
 
 // Add ripple effect to buttons
