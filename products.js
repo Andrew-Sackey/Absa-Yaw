@@ -19,8 +19,8 @@ function initializeProducts() {
             category: "Knapsack Sprayers",
             description: "High-capacity, durable sprayer with ergonomic design for efficient pesticide application. Features adjustable nozzle, comfortable straps, and easy-to-clean components.",
             features: ["20L Capacity", "Durable", "Ergonomic Design", "Adjustable Nozzle"],
-            price: "$35.00",
-            originalPrice: "$42.00",
+            price: "₵35.00",
+            originalPrice: "₵42.00",
             image: "./images/knap.png"
         },
         2: {
@@ -28,31 +28,31 @@ function initializeProducts() {
             category: "Weedicides",
             description: "Powerful broad-spectrum herbicide for effective weed control in all crop types. Fast-acting formula with eco-safe ingredients for sustainable farming.",
             features: ["Fast Acting", "Eco-Safe", "Broad Spectrum", "All Crops"],
-            price: "$15.00",
-            image: "./images/S2.jpeg"
+            price: "₵15.00",
+            image: "./images/w0.jpeg"
         },
         3: {
             title: "GreenShield Pesticide Pro",
             category: "Pesticides",
             description: "Advanced protection formula for comprehensive crop defense against pests and diseases. Long-lasting protection with multi-pest control capabilities.",
             features: ["Long-lasting", "Multi-pest", "Advanced Formula", "Crop Defense"],
-            price: "$18.00",
-            image: "./images/p1.png"
+            price: "₵18.00",
+            image: "./images/w4.png"
         },
         4: {
             title: "Premium Maize Seeds",
             category: "Seeds",
             description: "High-yield maize variety with excellent drought resistance and pest tolerance. Specially selected for optimal growth in various climatic conditions.",
             features: ["High Yield", "Drought Resistant", "Pest Tolerant", "Climate Adaptive"],
-            price: "$12.00",
-            image: "./images/R3.jpeg"
+            price: "₵12.00",
+            image: "./images/w14.jpeg"
         },
         5: {
             title: "Precision Sprayer Nozzle Kit",
             category: "Knapsack Sprayers",
             description: "Complete nozzle set for precise application and reduced chemical waste. Includes 5 different nozzle types for various spraying needs.",
             features: ["5-Piece Set", "Precision", "Waste Reduction", "Versatile"],
-            price: "$8.99",
+            price: "₵8.99",
             image: "./images/S4.jpeg"
         },
         6: {
@@ -60,57 +60,57 @@ function initializeProducts() {
             category: "Knapsack Sprayers",
             description: "Battery-powered sprayer for efficient coverage of large agricultural areas. Lightweight design with long battery life and powerful motor.",
             features: ["Battery Powered", "Mobile", "Long Battery Life", "Powerful Motor"],
-            price: "$85.00",
-            originalPrice: "$95.00",
+            price: "₵85.00",
+            originalPrice: "₵95.00",
             image: "./images/S5.jpeg"
         },
         7: {
-            title: "Organic Cashew Seeds",
+            title: "Organic Maize Seeds",
             category: "Seeds",
             description: "Certified organic cashew seeds for sustainable and profitable farming. High-quality seeds with excellent germination rates.",
             features: ["Certified Organic", "High Quality", "Sustainable", "High Germination"],
-            price: "$9.50",
-            image: "./images/c1.jpeg"
+            price: "₵9.50",
+            image: "./images/w8.jpeg"
         },
         8: {
-            title: "Professional Weed Blower",
-            category: "Knapsack Sprayers",
-            description: "Powerful blower for cleaning walkways, gardens, and agricultural areas. Lightweight design with high power output.",
+            title: "Powerful weedicide",
+            category: "weedicides",
+            description: "Powerful weedicide that is strong enough to burn all weeds in less than 3 day. Lightweight design with high power output.",
             features: ["High Power", "Lightweight", "Versatile Use", "Efficient"],
-            price: "$65.75",
-            image: "./images/R1.jpeg"
+            price: "₵65.75",
+            image: "./images/w16.jpeg"
         },
         9: {
             title: "Premium Organic Fertilizer",
             category: "Fertilizers",
             description: "100% organic fertilizer for sustainable soil enrichment and crop nutrition. Enriches soil naturally while promoting healthy plant growth.",
             features: ["100% Organic", "Soil Enriching", "Natural", "Eco-Friendly"],
-            price: "$25.00",
-            image: "./images/R2.jpeg"
+            price: "₵25.00",
+            image: "./images/w15.jpeg"
         },
         10: {
             title: "InsectGuard Pro",
             category: "Pesticides",
             description: "Advanced broad-spectrum insecticide for comprehensive pest management. Professional-grade formula for maximum effectiveness.",
             features: ["Broad Spectrum", "Professional", "Maximum Effectiveness", "Advanced Formula"],
-            price: "$20.00",
-            image: "./images/R6.jpeg"
+            price: "₵20.00",
+            image: "./images/w3.jpeg"
         },
         11: {
-            title: "Organic Maize Elite Seeds",
-            category: "Seeds",
-            description: "Elite variety organic maize seeds for maximum yield and superior quality harvest. Premium genetic selection for optimal results.",
+            title: "Effective Fertilizer",
+            category: "Fertilizers",
+            description: "Elite fertilizer for maximum yield and superior quality harvest. Premium genetic selection for optimal results.",
             features: ["Elite Variety", "Organic", "Maximum Yield", "Superior Quality"],
-            price: "$19.99",
-            image: "./images/m1.png"
+            price: "₵19.99",
+            image: "./images/w6.jpeg"
         },
         12: {
             title: "Compact Knapsack Sprayer",
             category: "Knapsack Sprayers",
             description: "Lightweight and durable sprayer perfect for small to medium farming operations. Compact design with professional performance.",
             features: ["Lightweight", "Compact", "Durable", "Professional"],
-            price: "$28.00",
-            originalPrice: "$32.00",
+            price: "₵28.00",
+            originalPrice: "₵32.00",
             image: "./images/R7.jpeg"
         }
     };
