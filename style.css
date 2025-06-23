@@ -1,20 +1,46 @@
+/* Universal Box-Sizing - Crucial for consistent calculations */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base HTML and Body Styles - Ensure they span full viewport and prevent unwanted scroll */
+html {
+  width: 100vw;
+  min-width: 0;
+  height: 100%; /* Ensure html takes full height */
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */ /* Remove or keep only if strictly necessary and doesn't break scrolling */
+  box-sizing: border-box;
+  position: relative;
+}
+
 body {
+  width: 100%;
+  min-width: 0;
+  height: 100%; /* Ensure body takes full height of html */
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */ /* Remove */
+  overflow-y: scroll; /* Allow vertical scrolling explicitly on body */
+  box-sizing: border-box;
+  transform: none !important;
+  filter: none !important;
+  perspective: none !important;
   font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   background: #fff;
-  overflow-x: hidden;
 }
 
 /* Modern Navbar */
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  /* CRITICAL CHANGE: Force .navbar to full viewport width using left/right */
+  left: 0; /* Forces element to start at viewport's left edge */
+  right: 0; /* Forces element to end at viewport's right edge */
+  width: 100%; /* Ensures it spans the entire space defined by left/right 0 */
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(34, 197, 94, 0.1);
@@ -23,12 +49,13 @@ body {
 }
 
 .nav-container {
-  max-width: 1400px;
-  margin: auto;
+  max-width: 1400px; /* Limits width on very large screens */
+  margin: auto; /* Centers the container */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* Default padding for larger screens */
+  width: 100%; /* Ensures it takes full width up to max-width */
 }
 
 /* Enhanced Logo */
@@ -91,7 +118,7 @@ body {
 
 /* Modern Navigation Links */
 .nav-menu {
-  display: flex;
+  display: flex; /* Default for larger screens */
   align-items: center;
   gap: 0.5rem;
   list-style: none;
@@ -148,7 +175,7 @@ body {
 }
 
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default on larger screens */
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
@@ -183,8 +210,14 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 0;
-  overflow: hidden;
+  /* IMPORTANT: Add padding-top to account for the fixed navbar height */
+  padding-top: 80px; /* **ADJUST THIS VALUE** based on your desktop navbar's computed height */
+  overflow: hidden; /* Important to contain content within the hero section */
+
+  /* CRITICAL CHANGE: Force .hero to full viewport width*/
+  width: 100vw; /* Forces hero to be exactly viewport width */
+  margin-left: calc(50% - 50vw); /* Centers it by offsetting any default browser margins */
+  margin-right: calc(50% - 50vw); /* This is a common trick for full-width sections */
 }
 
 .slideshow-container {
@@ -194,6 +227,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  box-sizing: border-box;
 }
 
 .slide {
@@ -213,21 +247,20 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Still monitor this for mobile performance/bugs */
 }
 
 .hero-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
+  max-width: 1400px; /* Max width for content on larger screens */
+  margin: 0 auto; /* Centers the container on larger screens */
+  display: grid; /* Default grid layout for larger screens */
   grid-template-columns: 1.2fr 0.8fr;
   gap: 4rem;
   align-items: center;
-  width: 100%;
-  padding: 0 2rem;
+  width: 100%; /* Ensures it takes full width up to max-width, within its parent (.hero) */
+  padding: 0 2rem; /* Default horizontal padding */
   position: relative;
   z-index: 5;
-  margin-top: 5%;
 }
 
 .hero-content {
@@ -289,7 +322,7 @@ body {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 3rem;
-  animation: slideInUp 1s ease-out 0.8s both;
+  animation: fadeIn 1.2s ease-out 1s both;
 }
 
 .btn-primary,
@@ -451,43 +484,70 @@ body {
 }
 
 /* Responsive Design */
+
+/* 1024px breakpoint */
 @media (max-width: 1024px) {
+  .hero {
+    padding-top: 80px; /* Keep consistent or adjust padding-top if navbar height changes here */
+    width: 100%; /* Reset width for larger screens back to 100% */
+    margin: 0; /* Reset margins */
+  }
   .hero-container {
-    grid-template-columns: 1fr;
+    display: flex; /* Change to flex for single column */
+    flex-direction: column;
     text-align: center;
     gap: 2rem;
-    margin-top: 8%;
+    margin: 0 auto; /* Keep centering on wider screens in this breakpoint */
+    width: 100%; /* Take full width of parent (.hero) */
+    padding: 0 1.5rem; /* Apply consistent padding for this breakpoint */
   }
-  
+
   .hero-title {
     font-size: 3.2rem;
   }
-  
+
   .stats-row {
-    justify-content: center;
+    justify-content: row;
     gap: 2.5rem;
   }
 }
 
+/* 768px breakpoint - Mobile Navigation & Hero Adjustments */
 @media (max-width: 768px) {
+  .hero {
+    /* Adjust padding-top for mobile fixed navbar */
+    padding-top: 70px; /* **ADJUST THIS VALUE** based on your mobile navbar's computed height */
+    width: 100vw; /* Force full viewport width on smaller screens*/
+    margin-left: calc(50% - 50vw); /**/
+    margin-right: calc(50% - 50vw); /**/
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 80px;
+    top: 70px; /* **ADJUST THIS VALUE** to match navbar height */
     flex-direction: column;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     width: 100%;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
     text-align: center;
-    transition: 0.3s;
+    transition: left 0.3s ease, opacity 0.3s ease;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     border-top: 1px solid rgba(34, 197, 94, 0.1);
     padding: 2rem 0;
     gap: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
   }
 
   .nav-menu.active {
     left: 0;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-menu li {
@@ -500,40 +560,75 @@ body {
     padding: 1rem 1.5rem;
     border-radius: 12px;
   }
-  
+
   .hamburger {
     display: flex;
   }
-  
+
   .nav-container {
-    padding: 0.8rem 1.5rem;
+    /* Adjusted padding for mobile navbar container to give more breathing room */
+    padding: 0.8rem 1.25rem; /* Reduced horizontal padding slightly*/
+    /* Ensure display:flex and justify-content: space-between are active */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure it spans the full width of the parent (navbar) */
   }
-  
+
+  .nav-logo {
+    /* Ensure consistent font size or adjust if needed for mobile */
+    font-size: 1.3rem; /* Slightly smaller logo text for mobile */
+  }
+
+  .logo-icon {
+    width: 40px; /* Slightly smaller logo icon for mobile */
+    height: 40px;
+    margin-right: 8px; /* Reduce margin next to icon */
+  }
+
   .logo-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Adjust if needed */
   }
-  
+
+  .hero-container {
+    width: 100%; /* 100% of its parent (.hero, which is now 100vw) */
+    margin: 0; /* Remove any auto margins here to avoid conflicts */
+    padding: 0; /* Remove horizontal padding from container, rely on content padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    width: 100%; /* Take full width of its parent (.hero-container) */
+    max-width: 600px; /* Optional: Limit content width for readability on larger phones */
+    padding: 0 1rem; /* Apply inner padding here */
+    box-sizing: border-box;
+    text-align: center;
+  }
+
   .hero-title {
     font-size: 2.8rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
     max-width: 100%;
   }
-  
+
   .stats-row {
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
     align-items: center;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-  
+
   .btn-primary,
   .btn-secondary {
     width: 100%;
@@ -541,31 +636,44 @@ body {
   }
 }
 
+/* 480px breakpoint - Smaller Mobile Screens */
 @media (max-width: 480px) {
-  .hero-container {
-    padding: 0 1rem;
+  .hero {
+    padding-top: 60px; /* **ADJUST THIS VALUE** */
+    width: 100vw; /* Force full viewport width*/
+    margin-left: calc(50% - 50vw); /**/
+    margin-right: calc(50% - 50vw); /**/
   }
-  
+
+  .hero-container {
+    width: 100%; /* Inherits from 768px breakpoint */
+  }
+
+  .hero-content {
+    padding: 0 0.5rem; /* Further reduce inner padding for very small screens */
+  }
+
   .hero-title {
     font-size: 2.2rem;
   }
-  
+
   .nav-container {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1rem; /* Even smaller padding*/
   }
-  
+
   .logo-icon {
     width: 35px;
     height: 35px;
   }
-  
+
   .logo-text {
     font-size: 1rem;
   }
 
   .nav-menu {
-    top: 70px;
+    top: 60px; /* **ADJUST THIS VALUE** */
     padding: 1.5rem 0;
+    height: calc(100vh - 60px);
   }
 
   .nav-link {
